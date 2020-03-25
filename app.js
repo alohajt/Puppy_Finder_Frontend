@@ -21,8 +21,7 @@ fetch('http://localhost:3000/cats')
 
         cats.forEach(cat => {
             const newCat = document.createElement('li')
-            newCat.innerHTML = `<a href='showType.html?id=${type.id}'>${type.name}</a>`
+            newCat.innerHTML = `<a href='showCat.html?id=${cat.id}'>${cat.name}</a>`
             catList.append(newCat)
-            
         });
     }
