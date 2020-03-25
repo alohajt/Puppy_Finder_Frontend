@@ -1,7 +1,7 @@
 const searchId = new URLSearchParams(window.location.search)
 const id = searchId.get('id')
 
-fetch(`http://localhost:3000/puppies/${id}`)
+fetch(`http://localhost:3000/animals/${id}`)
     .then(response => response.json())
     .then(puppy => showPuppy(puppy))
 
