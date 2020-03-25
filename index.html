@@ -12,10 +12,12 @@
 
     <h3>Upload a pet for adoption</h3>
     <form method='POST' action='http://localhost:3000/pokemons'>
-        <input type='text' name='name' placeholder='enter pet name'>
-        <input type='text' name='number' placeholder="enter pokemon number">
+        <input type='text' name='name' placeholder="enter pet's name">
+        <input type='text' name='bio' placeholder="enter pet's bio">
         <select id='type-dropdown' name='type_id' ></select>
-        <input type="submit" value='create pokemon'>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+        <input type="submit" value='upload a pet'>
     </form>
 </body>
 </html>
