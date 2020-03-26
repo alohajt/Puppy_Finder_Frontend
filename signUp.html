@@ -6,15 +6,14 @@
     <link href="signUp.css" rel="stylesheet" type="text/css" />
 
     <title>Sign Up</title>
+    <script src="signUp.js"></script>
 </head>
     <header>Please sign up your account</header>
-    <form method="POST" action="http://localhost:3000/signup">
+    <form method="POST" action="http://localhost:3000/users">
         username <input id="username" type="text" name="username" >
         password <input id="password" type="text" name="password">
         <select id="location_dropdown" name="location_id">
-            <option value="1">Denver</option>
-            <option value="2">Boulder</option>
-            <option value="3">Colorado Springs</option>
+            <!-- This will be autopopulated by JS code -->
         </select>
         <input onclick="signUp()" type="submit" value="submit">
 
