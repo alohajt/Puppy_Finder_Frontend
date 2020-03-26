@@ -24,7 +24,7 @@ function showPuppies(puppies){
         newPuppyCard.innerHTML = `
         <div class="card">
             <p class="card-title"><a href='http://localhost:3001/showPuppy.html?id=${puppy.id}'>${puppy.name}</a></p>
-            <div class="card-imgae">
+            <div class="card-image">
                 <img src="${puppy.picture}" alt="picture of ${puppy.name}" style="width:60%">
             </div>
             <div class="card-box">
