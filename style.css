@@ -1,0 +1,30 @@
+img {
+    /* background-image: url('puppy.jpg'); */
+      display: block;
+      margin: auto;
+      width: 50%;
+}
+header {
+  text-align: center;
+  padding: 0.1em;
+  }
+
+
+h6 {
+    background-color: #F1F1F1;
+    text-align: center;
+    font-size: 0.8em;
+    margin: 0.5em;
+  }
+
+  form {
+    background-color: #F1F1F1;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+.no-username {
+    background-color: #F1F1F1;
+    text-align: center;
+    margin: 0.5em;
+  }

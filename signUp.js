@@ -1,3 +1,3 @@
-function signUp{
+function signUp {
     console.log("heo")
 }
