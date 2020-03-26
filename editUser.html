@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit User</title>
+  <script src="editUser.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Edit Account</h1>
+ </header>
+ <nav>
+     <ul>
+         <li><a href="http://localhost:3001/favorites.html">View My Favorites</a></li>
+         <li><a href="http://localhost:3001/showPuppies.html">Main Page</a></li>
+         <li><a href="#" onclick="logout()">Logout</a></li>
+     
+     </ul>
+ </nav>
+  <form id="changeUsername" action='http://localhost:3000/users' method="POST" id="form_id">
+      <input type='text' name='username' id='username' placeholder="Re Enter Your User Name">
+      <input type='submit'  value='submit'></input>
+  </form>
+  <form id="changePassword" action='http://localhost:3000/users' method="POST" id="form_id">
+      <input type='text' name='username' id='username' placeholder="Re Enter Your User Name">
+      <input type='submit'  value='submit'></input>
+  </form>
+  <form id="changeLocation" action='http://localhost:3000/users' method="POST" id="form_id">
+    <select id="location_dropdown" name="location_id">
+     <!-- This will be autopopulated by JS code -->
+    </select>
+    <input type='submit'  value='submit'></input>
+  </form>
+
+ </form>
+  
+</body>
+</html>
