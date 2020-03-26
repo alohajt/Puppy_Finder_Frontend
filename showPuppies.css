@@ -1,32 +1,37 @@
+body {
+    background-color: aliceblue;
+}
 .card-title {
     margin: 0em;
 }
 
 h1 {
     text-align: center;
-    background-color: #ddd;
+    background-color: aliceblue;
     margin: 0em;
 }
 
 h3 {
     text-align: center;
-    background-color: #ddd;
+    background-color: aliceblue;
     margin-top: 0.5em;
     margin-bottom: 0em;
 }
 
 .topnav {
-    background-color: #ddd;
+    background-color: aliceblue;
     padding: 0.2em;
     margin: 0em;
 }
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: aliceblue;
     color: red;
   }
+
 .card {
-    width:400px;
+    justify-content: center;
+    width:500px;
     margin:0px auto;
     background-color:white;
     box-shadow:0px 5px 20px #999;
@@ -40,29 +45,22 @@ p.card-title {
     text-align: center;
 }
 
-.card:hover .card-image img {
-    width:120%;
-    filter:grayscale(0);
+div.card-image {
+    height:auto;
+    position: relative;
 }
 
-
-.card-image {
-    height:250px;
-    position:center;
-    overflow:hidden;
+h4 {
+    pointer-events：auto;
 }
-.card-image img {
-    width:150%;
-    position:center;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    filter:grayscale(1);
-    transition-property:filter width;
-    transition-duration:.3s;
-    transition-timing-function:ease;
+img{
+    display: block;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
-
 .card-body {
     text-align:center;
     font-family: 'Source Sans Pro', sans-serif;
@@ -74,6 +72,7 @@ ul {
     font-size: 0.8em;
     font-family: 'Source Sans Pro', sans-serif;
     text-align:center;
+    padding: 0em;
     margin: 5px;
 }
 
