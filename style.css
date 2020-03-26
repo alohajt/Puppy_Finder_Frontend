@@ -1,3 +1,7 @@
+body {
+  background-color: aliceblue;
+}
+
 img {
     /* background-image: url('puppy.jpg'); */
       display: block;
@@ -8,33 +12,41 @@ header {
   font-size: 1em;
   text-align: center;
   padding: 0.2em;
-  background-color: #F1F1F1;
+  background-color: aliceblue;
+  margin-top: 0.3em;
 
   }
 
 h3 {
   text-align: center;
   font-size: 0.8em;
-  background-color: #F1F1F1;
+  background-color: aliceblue;
   margin-bottom: 0em;
 }
 
 
 h6 {
-    background-color: #F1F1F1;
+    background-color: aliceblue;
     text-align: center;
     font-size: 0.8em;
     margin: 0.5em;
   }
 
   form {
-    background-color: #F1F1F1;
+    background-color: aliceblue;
     text-align: center;
     font-size: 0.8em;
+
   }
 
 .no-username {
-    background-color: #F1F1F1;
+    background-color: aliceblue;
     text-align: center;
     margin: 0.5em;
+  }
+
+  p {
+    margin: 0em;
+    padding: 0.2em;
+    font-size: 0.9em;
   }

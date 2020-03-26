@@ -16,3 +16,23 @@
     background-color: #ddd;
     color: black;
   }
+
+body {
+    background-color: aliceblue;
+  }
+
+p.card-title {
+  margin: 0.2em;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+div.card-image {
+  margin: 0em;
+  padding: 0em;
+  text-align: center;
+}
+
+.add-favorite {
+  text-align: center;
+}

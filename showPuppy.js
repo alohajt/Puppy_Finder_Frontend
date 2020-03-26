@@ -1,3 +1,6 @@
+const username = localStorage.getItem('username')
+header = document.querySelector('header')
+
 const searchId = new URLSearchParams(window.location.search)
 const id = searchId.get('id')
 
@@ -6,24 +9,26 @@ fetch(`http://localhost:3000/animals/${id}`)
     .then(puppy => showPuppy(puppy))
 
 function showPuppy(puppy){
-    const puppyList = document.querySelector('#puppy-list')
+    const puppyInfo = document.querySelector('#puppy-info')
 
-    const newPuppyName = document.createElement('li')
-    newPuppyName.innerText = puppy.name
-    const goodWithDog = document.createElement('li')
-    goodWithDog.innerText = puppy.gwdogs
-    const goodWithCat = document.createElement('li')
-    goodWithCat.innerText = puppy.gwcats
-    const goodWithChild = document.createElement('li')
-    goodWithChild.innerText = puppy.gwchild
-    const newPuppyBio = document.createElement('li')
-    newPuppyBio.innerText = puppy.bio
-
-    //show puppy's image
-    const img = document.createElement("img");
-    img.src = puppy.image;
-    const src = document.getElementById("li");
-    src.appendChild(img);
-
-    puppyList.append(newPuppyBio,newPuppyName)
-}
+    const newPuppyCard = document.createElement('div')
+    newPuppyCard.class="card"
+    newPuppyCard.innerHTML = `
+    <div class="card">
+        <p class="card-title"><a href='http://localhost:3001/showPuppy.html?id=${puppy.id}'>${puppy.name}</a></p>
+        <div class="card-image" >
+            <img src="${puppy.picture}" alt="picture of ${puppy.name}" style="width:60%">
+        </div>
+        <div class="card-box">
+            <ul>Breed: ${puppy.breed}</ul>
+            <ul>Good with kids: ${puppy.gwkids}</ul>
+            <ul>Good with other dogs: ${puppy.gwdogs}</ul>
+            <ul>Good with other cats: ${puppy.gwcats}</ul>
+            <ul><b>${puppy.bio}</b></ul>
+        </div>
+        <form class="add-favorite">
+            <input id="${puppy.id}" type="button" value="add to favorites" onClick="addToFavorites()">
+        </form>
+    </div>`
+        puppyInfo.append(newPuppyCard)
+    }
