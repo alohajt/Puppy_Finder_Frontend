@@ -1,3 +1,4 @@
+
 fetch(`http://localhost:3000/locations`)
     .then(response => response.json())
     .then(locations => locationList(locations))
@@ -11,4 +12,5 @@ function locationList(locationList){
         newLocation.innerText = location.city
         locations.append(newLocation)
     })
+
 }
