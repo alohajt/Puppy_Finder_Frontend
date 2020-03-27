@@ -21,10 +21,10 @@ function showPuppy(puppy){
         </div>
         <div class="card-box">
             <ul>Breed: ${puppy.breed}</ul>
-            <ul>Good with kids: ${puppy.gwkids}</ul>
-            <ul>Good with other dogs: ${puppy.gwdogs}</ul>
-            <ul>Good with other cats: ${puppy.gwcats}</ul>
-            <ul><b>${puppy.bio}</b></ul>
+            <ul>${puppy.gwkids? `${puppy.name} is fantastic with kids`: "" }</ul>
+            <ul>${puppy.gwdogs? `${puppy.name} is terrific with other dogs`: "" }</ul>
+            <ul>${puppy.gwcats? `${puppy.name} is amazing with cats`: "" }</ul>
+            <ul><b>BIO:${puppy.bio}</b></ul>
         </div>
         <form class="add-favorite">
             <input id="${puppy.id}" type="button" value="add to favorites" onClick="addToFavorites()">

@@ -6,9 +6,9 @@ const welcome_message = document.createElement('h1')
 welcome_message.innerHTML = `${username}'s homepage`
 header.append(welcome_message)
 
-fetch('http://localhost:3000/animals/')
+fetch(`http://localhost:3000/userLocation/${username}`)
     .then(response => response.json())
-    .then(puppies => showPuppies(puppies))
+    .then(location => showPuppies(location.animals))
 
 function showPuppies(puppies){
     const puppiesList = document.querySelector('#puppies-list')
@@ -29,13 +29,13 @@ function showPuppies(puppies){
             </div>
             <div class="card-box">
                 <ul>Breed: ${puppy.breed}</ul>
-                <ul>Good with kids: ${puppy.gwkids}</ul>
-                <ul>Good with other dogs: ${puppy.gwdogs}</ul>
-                <ul>Good with other cats: ${puppy.gwcats}</ul>
+                <ul>${puppy.gwkids? "Good with kids": "" }</ul>
+                <ul>${puppy.gwdogs? "Good with dogs": "" }</ul>
+                <ul>${puppy.gwcats? "Good with cats": "" }</ul>
                 <ul><b>${puppy.bio}</b></ul>
             </div>
             <form class="add-favorite">
-                <input id="${puppy.id}" type="button" value="add to favorites" onClick="addToFavorites()">
+                <input id="${puppy.id}" type="button" value="add to favorites" onClick="addToFavorites(${puppy.id})">
             </form>
         </div>`
         puppiesList.append(newPuppyCard)
@@ -43,7 +43,9 @@ function showPuppies(puppies){
 }
 
 
-function addToFavorites(){
+function addToFavorites(puppyID){
+    console.log("fuckfuckfuck")
+    fetch(`http://localhost:3000/addToFavorites/${username}/${puppyID}`, {method: 'POST' })
 
 }
 function logout(){
