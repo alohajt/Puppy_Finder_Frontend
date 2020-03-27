@@ -5,15 +5,24 @@ h4 {
 }
 
 .topnav {
-    background-color: aliceblue;
+    overflow: hidden;
+    background-color: #333;
+    top: 0;
+  }
+   
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
-    justify-content: space-around;
-    padding: 0.2em;
-}
-
-.topnav a:hover{
-    color:red
-}
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+   
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 
 form {
     background-color: aliceblue;

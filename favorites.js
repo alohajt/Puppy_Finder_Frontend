@@ -35,7 +35,7 @@ fetch(`http://localhost:3000/userFavorites/${username}`)
                   <ul><b>${favorite.animal.bio}</b></ul>
               </div>
               <form class="add-favorite">
-                  <input id="${favorite.animal.id}" type="button" value="add to favorites" onClick="addToFavorites(${favorite.animal.id})">
+                  <input id="${favorite.animal.id}" type="button" value="remove from favorites" onClick="addToFavorites(${favorite.animal.id})">
               </form>
           </div>`
           
