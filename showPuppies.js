@@ -13,11 +13,6 @@ fetch(`http://localhost:3000/userLocation/${username}`)
 function showPuppies(puppies){
     const puppiesList = document.querySelector('#puppies-list')
 
-    // puppiesUnderLocation = puppies.select(puppy =>{
-    
-    //     puppy.location == userLocation
-    // })
-
     puppies.forEach(puppy => {
         const newPuppyCard = document.createElement('div')
         newPuppyCard.class="card"
